@@ -1,4 +1,4 @@
-class Blog::Ckeditor::AttachmentFile < Ckeditor::Asset
+class Blog::Ckeditor::AttachmentFile < Blog::Ckeditor::Asset
   mount_uploader :data, Blog::CkeditorAttachmentFileUploader, :mount_on => :data_file_name
 
   def url_thumb
