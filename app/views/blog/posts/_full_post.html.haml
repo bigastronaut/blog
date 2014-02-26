@@ -8,7 +8,8 @@
   .content{"data-blog" => "content"}
     = raw @post.content
   .tags{"data-blog" => "tags"}
-    = render @post.tags
+    - @tags.each do |tag|
+      %span.tag= link_to tag.name, tag_url(tag)
   .social
     = render_shareable :url=> @post.full_url, :facebook=> {:send=> 'true', :url=> @post.full_url}
   .comments
