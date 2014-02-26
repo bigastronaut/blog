@@ -1,5 +1,0 @@
-- unless Blog::Config.twitter_username.nil?
-  = sidebar_section_for(t(".title")) do
-    %ul#latest_tweets
-      %li#tweet_template{:style => "display:none;"} {{text}}
-    %script{:src => "https://api.twitter.com/1/statuses/user_timeline/#{Blog::Config.twitter_username}.json?callback=TwitterWidget.callback&amp;count=5", :type => "text/javascript"}
