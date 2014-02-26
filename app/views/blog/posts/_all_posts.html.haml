@@ -1,0 +1,7 @@
+- content_for :head do
+  = rss_head_link
+  = stylesheet_link_tag 'blog/blog/blog'
+
+= render @posts
+- if @page
+  = render partial: "pagination"

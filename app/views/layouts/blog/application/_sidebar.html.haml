@@ -1,0 +1,4 @@
+- if Blog::Config.sidebar
+  %aside.sidebar.four.columns
+    - Blog::Config.sidebar.each do |ext|
+      = render partial: "blog/sidebar/#{ext}"

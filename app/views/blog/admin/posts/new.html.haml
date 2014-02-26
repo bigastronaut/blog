@@ -1,0 +1,3 @@
+%h1= t(".header")
+= blog_admin_form_for ["admin", @post] do |post|
+  = render partial: 'form', locals: {post: post}

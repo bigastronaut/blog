@@ -1,0 +1,8 @@
+%section
+  %a.head-image{href: post.full_url, style: "opacity: 1;"}
+    = image_tag post.image_url(:full_size) if post.image?
+  = render partial: 'blog/posts/post_header', locals: {post: post}
+  .content{"data-blog" => "content"}
+    = truncate_html(post.content, length: 1000, omission: '...')
+  .tags{"data-blog" => "tags"}
+    = render post.tags

@@ -1,0 +1,15 @@
+- content_for :head do
+  = rss_head_link
+  = stylesheet_link_tag 'blog/blog/blog'
+
+%article
+  = image_tag @post.image_url(:full_size) if @post.image?
+  = render partial: 'blog/posts/post_header', locals: {post: @post }
+  .content{"data-blog" => "content"}
+    = raw @post.content
+  .tags{"data-blog" => "tags"}
+    = render @post.tags
+  .social
+    = render_shareable :url=> @post.full_url, :facebook=> {:send=> 'true', :url=> @post.full_url}
+  .comments
+    = render 'blog/posts/disqus_thread'

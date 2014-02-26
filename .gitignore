@@ -1,0 +1,8 @@
+.bundle/
+log/*.log
+pkg/
+.sass-cache/
+.DS_Store
+.idea/
+.idea/**/*
+Gemfile.lock
