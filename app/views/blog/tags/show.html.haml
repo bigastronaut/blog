@@ -1,0 +1,11 @@
+- content_for :head do
+  = rss_head_link
+  = stylesheet_link_tag 'blog/blog/blog'
+
+.tag-search
+  = t(".showing_post_with_tag")
+  = succeed "." do
+    %strong
+      '#{@tag.name}'
+  = link_to t(".show_all_posts"),:root
+= render @posts
