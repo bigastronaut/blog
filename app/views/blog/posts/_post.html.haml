@@ -5,5 +5,5 @@
   .content{"data-blog" => "content"}
     = truncate_html(post.content, length: 1000, omission: '...')
   .tags{"data-blog" => "tags"}
-    - @tags.each do |tag|
-      %span.tag= link_to tag.name, tag_url(tag)
+    = render post.tags
+
