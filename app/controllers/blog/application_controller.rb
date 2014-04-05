@@ -1,5 +1,5 @@
 class Blog::ApplicationController < ApplicationController
-  layout Blog::Config.layout if Blog::Config.layout # TODO: find a way to test that. It was asked in issue #54 (https://github.com/jipiboily/blog/issues/54)
+  layout Blog::Config.layout if Blog::Config.layout
 
   before_filter :recent_posts, :all_tags
 
