@@ -24,7 +24,6 @@ Gem::Specification.new do |s|
   s.add_dependency "ckeditor"
   s.add_dependency "select2-rails", "~> 3.2"
   s.add_dependency "haml-rails"
-  s.add_dependency "shareable"
   s.add_dependency "mini_magick"
   s.add_dependency "carrierwave"
   #switch to s3
