@@ -6,6 +6,7 @@ class Blog::Post < ActiveRecord::Base
 
   scope :default,  -> {order("published_at DESC, blog_posts.created_at DESC, blog_posts.updated_at DESC") }
   scope :published, -> { default.where(published: true).where("published_at <= ?", DateTime.now) }
+  scope :published_with_an_image, -> {published.where('image is not null')}
 
   default_scope{includes(:tags)}
 
