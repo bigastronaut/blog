@@ -1,7 +1,7 @@
 - content_for :head do
   = rss_head_link
   = stylesheet_link_tag 'blog/blog/blog'
-  = render 'blog/posts/shareholic'
+  = render 'blog/posts/shareaholic'
 
 %article
   = image_tag @post.image_url(:full_size) if @post.image?

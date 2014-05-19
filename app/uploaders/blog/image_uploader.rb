@@ -1,9 +1,6 @@
 class Blog::ImageUploader < CarrierWave::Uploader::Base
-  include Cloudinary::CarrierWave
-  include CarrierWave::MiniMagick
-
-  process :convert => 'jpg'
-  process :tags => ['post_picture']
+  include CarrierWave::RMagick
+  storage :fog
 
   # Create different versions of your uploaded files:
   version :thumb do
