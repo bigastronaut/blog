@@ -10,6 +10,6 @@
     = raw @post.content
   .tags{"data-blog" => "tags"}
     = render @post.tags
-  .shareaholic-canvas{"data-app" => "share_buttons", "data-app-id" => "6430854"}
+  .shareaholic-canvas{"data-app" => "share_buttons", "data-app-id" => "#{Blog::Config.shareaholic_app_id}"}
   .comments
     = render 'blog/posts/disqus_thread'

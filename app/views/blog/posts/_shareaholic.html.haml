@@ -8,7 +8,7 @@
       shr.onload = shr.onreadystatechange = function() {
         var rs = this.readyState;
         if (rs && rs != 'complete' && rs != 'loaded') return;
-        var site_id = '83d5f2b84f8ba05dd1d0d1e28edbc11d';
+        var site_id = '#{Blog::Config.shareaholic}';
         try { Shareaholic.init(site_id); } catch (e) {}
       };
       var s = document.getElementsByTagName('script')[0];

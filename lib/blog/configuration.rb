@@ -6,6 +6,8 @@ module Blog
                   :meta_description,
                   :site_url,
                   :disqus_shortname,
+                  :shareaholic,
+                  :shareaholic_app_id,
                   :twitter_username,
                   :twitter_locale,
                   :facebook_like_locale,
