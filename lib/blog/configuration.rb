@@ -20,7 +20,10 @@ module Blog
                   :admin_force_ssl,
                   :posts_per_page,
                   :layout,
-                  :sidebar
+                  :sidebar,
+                  :aws_access_key_id,
+                  :aws_secret_access_key,
+                  :fog_directory
 
   end
 
