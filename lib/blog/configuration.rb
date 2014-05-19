@@ -2,7 +2,9 @@ module Blog
   class Configuration
     include ConfigurationExtensions
 
-    attr_accessor :site_url,
+    attr_accessor :site_name,
+                  :meta_description,
+                  :site_url,
                   :disqus_shortname,
                   :twitter_username,
                   :twitter_locale,
