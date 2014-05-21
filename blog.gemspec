@@ -25,7 +25,7 @@ Gem::Specification.new do |s|
   s.add_dependency "select2-rails", "~> 3.2"
   s.add_dependency "haml-rails"
   s.add_dependency "fog"
-  s.add_dependency "rmagick"
+  s.add_dependency "mini_magick"
   s.add_dependency "carrierwave"
 
   s.add_development_dependency "pg"
